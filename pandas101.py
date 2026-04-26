@@ -30,6 +30,21 @@ chnaged_name=indexed_file.rename(columns={'fullname':"Full Name"}) #change col/t
 
 
 
+file.drop(index=0, inplace=True) # delete row
+file.drop('enrollment_date',axis=1, inplace=True) # delete col
+
+file.loc[4,'data_structure_marks']= 90 #assign value
+file.loc[3,'completion_status']= 'Completed' #assign value
+file.loc[1:3,'python_marks'] += 2 #assign value
+
+for i in file.itertuples(index=False):
+    print(f'{i} ')
+
+
+
+
+
+
 # print(file_head)
 # print(file_tail)
 # print(specific_col)
@@ -42,4 +57,5 @@ chnaged_name=indexed_file.rename(columns={'fullname':"Full Name"}) #change col/t
 # print(access_multi_col)
 # print(access_multi_col_row)
 # print(multi_col_row)
-print(chnaged_name)
+# print(indexed_file)
+# print(file)
