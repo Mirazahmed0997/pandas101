@@ -37,13 +37,21 @@ file.loc[4,'data_structure_marks']= 90 #assign value
 file.loc[3,'completion_status']= 'Completed' #assign value
 file.loc[1:3,'python_marks'] += 2 #assign value
 
-for i in file.itertuples(index=False):
-    print(f'{i} ')
+# for i in file.itertuples(index=False):
+    # print(f'{i} ')
 
 
+#sorting
+asc_sorted_file=file.sort_values('algorithm_marks')
+desc_sorted_file=file.sort_values('algorithm_marks',ascending=False)
 
 
+#filtering data
 
+in_progress= file.loc[file['completion_status']=='In Progress']
+
+#completed and data marks more than 80
+completed= file.loc[(file['completion_status']=='Completed') & (file['data_structure_marks']>=80)]
 
 # print(file_head)
 # print(file_tail)
@@ -59,3 +67,4 @@ for i in file.itertuples(index=False):
 # print(multi_col_row)
 # print(indexed_file)
 # print(file)
+print(completed)
