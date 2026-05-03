@@ -95,7 +95,10 @@ rmv_duplicates= file.drop_duplicates(inplace=True) #remove duplicate row , by us
 
 remove_name_duplicates=file.drop_duplicates(subset=['fullname','First Name'],keep='first') #checking any duplicates value in a col and removed
 
-print(remove_name_duplicates)
+# print(remove_name_duplicates)
+
+
+
 
 
 
