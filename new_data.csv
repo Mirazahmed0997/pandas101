@@ -1,0 +1,8 @@
+,studentId,fullname,data_structure_marks,algorithm_marks,python_marks,completion_status,enrollment_date,country,Total Marks,DS Grade,Passed,First Name,Last Name
+0,101,Rahim Uddin,78,,85,Completed,2025-01-10,Bangladesh,,A,True,Rahim,Uddin
+1,102,Karim Ahmed,65,70.0,72,In Progress,2025-02-15,Bangladesh,207.0,A,True,Karim,Ahmed
+2,103,Nusrat Jahan,88,91.0,90,Completed,2025-01-25,Bangladesh,269.0,A,True,Nusrat,Jahan
+3,104,Tanvir Hasan,55,60.0,58,Not Completed,2025-03-05,Bangladesh,173.0,A,True,Tanvir,Hasan
+4,105,Sadia Islam,92,95.0,94,Completed,2025-01-18,Bangladesh,281.0,A+,True,Sadia,Islam
+5,106,Imran Hossain,73,76.0,78,In Progress,2025-02-28,Bangladesh,227.0,A,True,Imran,Hossain
+6,107,Farhana Akter,81,85.0,87,Completed,2025-01-30,Bangladesh,253.0,A,True,Farhana,Akter

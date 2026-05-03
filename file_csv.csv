@@ -1,5 +1,5 @@
 studentId,fullname,data_structure_marks,algorithm_marks,python_marks,completion_status,enrollment_date
-101,Rahim Uddin,78,82,85,Completed,2025-01-10
+101,Rahim Uddin,78,NaN,85,Completed,2025-01-10
 102,Karim Ahmed,65,70,72,In Progress,2025-02-15
 103,Nusrat Jahan,88,91,90,Completed,2025-01-25
 104,Tanvir Hasan,55,60,58,Not Completed,2025-03-05
