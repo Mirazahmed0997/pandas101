@@ -7,13 +7,13 @@ df= pd.read_csv('file_csv.csv')
 
 
 #if any null value in a row drop full row and create a copy of main file
-# remove_null= file.dropna() 
+remove_null= file.dropna() 
 
-# remove_null_values = file.dropna(how='all')
+remove_null_values = file.dropna(how='all')
 
 # remove_col_null_values= file.dropna(subset='algorithm_marks') #remove data by specific col
 
-# fill_null_values= file.fillna(0)
+fill_null_values= file.fillna(0)
 
 
 
