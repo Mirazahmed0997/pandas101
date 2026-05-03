@@ -31,11 +31,13 @@ tuple_df= pd.DataFrame(tuple_data, columns=['Id','Name','Marks'],index=[1,2,3])
 dict_df= pd.DataFrame(dict_data)
 dict_df_list= pd.DataFrame(dict_data_list)
 
-print(type(dict_df_list))
-print(dict_df_list)
+# print(type(dict_df_list))
+# print(dict_df_list)
 # print(type(dict_df))
 # print(dict_df)
 # print(type(tuple_df))
 # print(tuple_df)
 # print(type(list_df))
 # print(list_df)
+
+

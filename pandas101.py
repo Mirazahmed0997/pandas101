@@ -43,7 +43,7 @@ file.loc[1:3,'python_marks'] += 2 #assign value
 
 #sorting
 asc_sorted_file=file.sort_values('algorithm_marks')
-desc_sorted_file=file.sort_values('algorithm_marks',ascending=False)
+desc_sorted_file=file.sort_values(['algorithm_marks','data_structure_marks'],ascending=[False,True])
 
 
 #filtering data
@@ -67,4 +67,5 @@ completed= file.loc[(file['completion_status']=='Completed') & (file['data_struc
 # print(multi_col_row)
 # print(indexed_file)
 # print(file)
-print(completed)
+print(chnaged_name)
+# print("Sorted value\n",desc_sorted_file)
