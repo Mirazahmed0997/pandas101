@@ -65,6 +65,24 @@ file['Last Name']= file['fullname'].str.split(' ').str[1]
 
 file.to_csv('new_data.csv')
 
-print(file)
+
+
+# -----------------unique & null checking-------------------------
+
+file= pd.read_csv('new_data.csv')
+unique_value=file['fullname'].unique()
+
+al_unique_marks=file['algorithm_marks'].unique()
+
+unique_data=file.nunique()
+
+isnull=file.isnull()
+isnull_col=file['algorithm_marks'].isnull() #check for every row
+isnull_col1=file['algorithm_marks'].notnull() #check for every row
+
+isnull_col2=file['algorithm_marks'].hasnans #check specific col
+
+# print(file)
+print(isnull_col2)
 
 
