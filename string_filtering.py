@@ -63,7 +63,7 @@ file['First Name']= file['fullname'].str.split(' ').str[0]
 file['Last Name']= file['fullname'].str.split(' ').str[1]
 
 
-file.to_csv('new_data.csv')
+# file.to_csv('new_data.csv')
 
 
 
@@ -82,7 +82,20 @@ isnull_col1=file['algorithm_marks'].notnull() #check for every row
 
 isnull_col2=file['algorithm_marks'].hasnans #check specific col
 
-# print(file)
-print(isnull_col2)
+# print(isnull_col2)
+
+
+
+
+# -------------------remove duplicate value & fill null values------------------
+
+is_duplicate=file.duplicated()
+
+rmv_duplicates= file.drop_duplicates(inplace=True) #remove duplicate row , by using inplace we can removing duplicates values from original file 
+
+remove_name_duplicates=file.drop_duplicates(subset=['fullname','First Name'],keep='first') #checking any duplicates value in a col and removed
+
+print(remove_name_duplicates)
+
 
 
