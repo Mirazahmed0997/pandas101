@@ -38,7 +38,7 @@ city_contains=df.loc[df['city'].str.contains(r"dhaka|syl",case=False)]
 
 city_start_with=df.loc[df['city'].str.contains(r"^sy",case=False)]
 
-
+# print(city)
 name_end_with=df.loc[df['name'].str.contains(r"al$",case=False)]
 
 name_start_with_vowel=df.loc[df['name'].str.contains(r"^[aeiou]",case=False)]
@@ -82,7 +82,8 @@ isnull_col1=file['algorithm_marks'].notnull() #check for every row
 
 isnull_col2=file['algorithm_marks'].hasnans #check specific col
 
-# print(isnull_col2)
+# print(al_unique_marks)
+
 
 
 
