@@ -17,5 +17,5 @@ id,class_level,subject,study_hours,test_scores,week,attendance_rate,gender
 16,6,ICT,8,67,2,79,Female
 17,7,Math,13,84,2,91,Male
 18,8,Bangla,11,75,2,87,Female
-19,9,Science,15,89,2,95,Male
+19,9,Science,15,89,3,95,Male
 20,10,English,6,61,2,74,Female
