@@ -110,7 +110,6 @@ def rmv_dup(num):
 
 # rmv_dup(number)
 
-# 10 -------------------
+        
 
-def chk_prime(num):
     
