@@ -19,4 +19,15 @@ def fibonacci(numb):
     for i in range(1,numb):
         arr.append(arr[i]+ arr[i-1])
     print(arr)
-fibonacci(13)
+
+# fibonacci(7)
+
+# 3 ---------------------
+# formula (c * 9/5) + 32
+
+def cel_to_farenheit(cel):
+        conv_to_far=(cel* 9/5) + 32
+        print(conv_to_far, "Farenheit")
+
+
+cel_to_farenheit(5)
