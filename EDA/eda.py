@@ -34,77 +34,77 @@ stat_data = file.describe()
 # ------------------------------------------------------------------
 
 
-sns.countplot(data=file, x=file['Survived'])
-survival_count= file['Survived'].value_counts() #counts
-survival_ratio= (survival_count/len(file)) *100 #percentage
+# sns.countplot(data=file, x=file['Survived'])
+# survival_count= file['Survived'].value_counts() #counts
+# survival_ratio= (survival_count/len(file)) *100 #percentage
 
-label= file['Survived'].unique()
+# label= file['Survived'].unique()
 
-plt.pie(survival_count,labels=label ,autopct="%1.1f",explode = (0.1, 0))
-plt.title("Survival rate")
-plt.grid()
-plt.show()
-
-
-
-sns.countplot(data=file, x=file['Pclass'])
-class_count= file['Pclass'].value_counts() #counts
-class_ratio= (class_count/len(file)) *100 #percentage
-
-label= file['Pclass'].unique()
-
-plt.pie(class_count,labels=label ,autopct="%1.1f",explode = (0.05, 0,0.05))
-plt.title("class rate")
-plt.grid()
-plt.show()
+# plt.pie(survival_count,labels=label ,autopct="%1.1f",explode = (0.1, 0))
+# plt.title("Survival rate")
+# plt.grid()
+# # plt.show()
 
 
 
+# sns.countplot(data=file, x=file['Pclass'])
+# class_count= file['Pclass'].value_counts() #counts
+# class_ratio= (class_count/len(file)) *100 #percentage
 
+# label= file['Pclass'].unique()
 
-sns.countplot(data=file, x=file['Pclass'])
-gender_count= file['Sex'].value_counts() #counts
-gender_ratio= (gender_count/len(file)) *100 #percentage
-
-label= file['Sex'].unique()
-
-plt.pie(gender_count,labels=label ,autopct="%1.1f",explode = (0.05, 0))
-plt.title("gender rate")
-plt.grid()
-plt.show()
-
-
-
-sns.countplot(data=file, x=file['Embarked'])
-Embarked_count= file['Embarked'].value_counts() #counts
-Embarked_ratio= (Embarked_count/len(file)) *100 #percentage
-file = file.dropna(subset=['Embarked'])
-label= file['Embarked'].unique()
-
-
-plt.pie(Embarked_count,labels=label ,autopct="%1.1f")
-plt.title("Embarked rate")
-plt.grid()
-plt.show()
-
-
-# step -7, Numerical features analysis with di-variate analysis
+# plt.pie(class_count,labels=label ,autopct="%1.1f",explode = (0.05, 0,0.05))
+# plt.title("class rate")
+# plt.grid()
+# # plt.show()
 
 
 
-sns.histplot(file['Age'],bins=50)
-sns.kdeplot(file['Age'])
-
-plt.title("KDE of ages")
-plt.xlabel("Ages")
-plt.ylabel("Probability")
-plt.grid()
-plt.show()
 
 
+# sns.countplot(data=file, x=file['Pclass'])
+# gender_count= file['Sex'].value_counts() #counts
+# gender_ratio= (gender_count/len(file)) *100 #percentage
 
-# sns.histplot(file['Fare'],bins=50)
-# sns.kdeplot(file['Fare'])
+# label= file['Sex'].unique()
+
+# plt.pie(gender_count,labels=label ,autopct="%1.1f",explode = (0.05, 0))
+# plt.title("gender rate")
+# plt.grid()
+# # plt.show()
+
+
+
+# sns.countplot(data=file, x=file['Embarked'])
+# Embarked_count= file['Embarked'].value_counts() #counts
+# Embarked_ratio= (Embarked_count/len(file)) *100 #percentage
+# file = file.dropna(subset=['Embarked'])
+# label= file['Embarked'].unique()
+
+
+# plt.pie(Embarked_count,labels=label ,autopct="%1.1f")
+# plt.title("Embarked rate")
+# plt.grid()
+# # plt.show()
+
+
+# # step -7, Numerical features analysis with di-variate analysis
+
+
+
+# sns.histplot(file['Age'],bins=50)
+# sns.kdeplot(file['Age'])
+
+# plt.title("KDE of ages")
+# plt.xlabel("Ages")
+# plt.ylabel("Probability")
+# plt.grid()
+# # plt.show()
+
+
+
+# # sns.histplot(file['Fare'],bins=50)
+# # sns.kdeplot(file['Fare'])
 sns.boxplot(file['Fare']) # to detect outliers
 
 plt.title("KDE of Fares")
@@ -115,4 +115,4 @@ plt.show()
 
 
 
-# print(file.head(2))
+print(file[file['Age']>30])
