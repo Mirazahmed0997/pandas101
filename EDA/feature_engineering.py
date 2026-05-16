@@ -17,7 +17,11 @@ file.drop(['Ticket','Name','PassengerId','Cabin'], axis=1,inplace=True)
 x= file.drop(['Survived'], axis=1) # features cols
 y=file['Survived'] # target cols
 
+# 2- Splits the train & test data using sklearn
+x_train,x_test,y_train,y_test=train_test_split(x,y,test_size=0.2,random_state=42)
 
+# print(x_train)
+print(y_train)
 
 # print(x)
 # print(y)
