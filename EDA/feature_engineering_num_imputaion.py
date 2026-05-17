@@ -3,6 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.model_selection import train_test_split
+from sklearn.impute import SimpleImputer
 
 
 
@@ -25,7 +26,7 @@ y=file['Survived'] # target cols
 x_train,x_test,y_train,y_test=train_test_split(x,y,test_size=0.2,random_state=42)
 
 # 3- fill/impute/handle missing values 
-# file.drop(['Cabin'], axis=1,inplace=True)
+file.drop(['Cabin'], axis=1,inplace=True)
 
 
 # numerical missing value imputation
@@ -34,30 +35,43 @@ x_train,x_test,y_train,y_test=train_test_split(x,y,test_size=0.2,random_state=42
 # file_test=x_test.isnull().sum()
 
 
-# imputation for mean
+# imputation for mean using pandas
 mean_age= x_train['Age'].mean()
 x_train['age_mean_imputor']=x_train['Age'].fillna(mean_age)
 x_test['age_mean_imputor']=x_test['Age'].fillna(mean_age)
 
 
-# imputation for median
+# imputation for median using pandas
 median_age= x_train['Age'].median()
 x_train['age_median_imputor']=x_train['Age'].fillna(median_age)
 x_test['age_median_imputor']=x_test['Age'].fillna(median_age)
 
 
-sns.kdeplot(data=x_train, x='age_mean_imputor')
-sns.kdeplot(data=x_train, x='age_median_imputor')
+#simple imputation using ML ecoflow
 
-plt.grid()
-plt.show()
+age_imputor= SimpleImputer(missing_values=np.nan,strategy='mean')
+
+age_imputor.fit(x_train[['Age']])
+
+x_train['Age']= age_imputor.transform(x_train[['Age']])
+
+x_train.drop(['age_median_imputor','age_mean_imputor'], axis=1,inplace=True)
+
+
+
+x_test['Age']= age_imputor.transform(x_test[['Age']]).ravel()
+x_test.drop(['age_median_imputor','age_mean_imputor'], axis=1,inplace=True)
 
 
 
 
+# sns.kdeplot(data=x_train, x='age_mean_imputor')
+# sns.kdeplot(data=x_train, x='age_median_imputor')
 
-
+# plt.grid()
+# plt.show()
 print(x_test.isnull().sum())
+print(x_test)
 
 
 
