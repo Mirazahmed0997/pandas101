@@ -24,8 +24,9 @@ pclass_encoder.fit(x_train[['Pclass']])
 x_train['encoded_pclass']= pclass_encoder.transform(x_train[['Pclass']]).ravel()
 x_test['encoded_pclass']= pclass_encoder.transform(x_test[['Pclass']]).ravel()
 
-x_test.drop(['encoded_pclass'], axis=1,inplace=True)
+x_test.drop(['Pclass'], axis=1,inplace=True)
 
 
 print(x_test.head(5))
+
 # print(x_train.head(5))
