@@ -42,3 +42,5 @@ plt.show()
 
 print("Predictions:", predictions)
 print("Cost:", compute_cost(exp, sal, w, b))
+
+
