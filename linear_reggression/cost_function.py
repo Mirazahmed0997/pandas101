@@ -15,7 +15,7 @@ def compute_cost(x, y, w, b):
         error = prediction - y[i]
         cost += error ** 2
 
-    cost = cost / m
+    cost = cost / 2*m
     return cost
 
 

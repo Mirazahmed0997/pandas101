@@ -28,5 +28,8 @@ for i in range(-100,100):
     w.append(i)
     cost.append(cost_i)
 
+def calculate_gradient():
+    
+
 plt.plot(w,cost)
 plt.show()
