@@ -19,7 +19,7 @@ def compute_cost(x, y, w, b):
     return cost
 
 
-def make_prediction(x, w, b):
+def make_prediction(x,y, w, b):
     m = x.shape[0]
     pred_list = np.zeros(m)
 
@@ -32,15 +32,15 @@ def make_prediction(x, w, b):
 w = 10.0
 b = 5.0
 
-predictions = make_prediction(exp, w, b)
+# predictions = make_prediction(exp, w, b)
 
-sns.scatterplot(x=exp, y=sal)
-plt.plot(exp, predictions)
-plt.title(f"Cost: {compute_cost(exp, sal, w, b):.2f}, w={w}, b={b}")
-plt.grid(True)
-plt.show()
+# sns.scatterplot(x=exp, y=sal)
+# plt.plot(exp, predictions)
+# plt.title(f"Cost: {compute_cost(exp, sal, w, b):.2f}, w={w}, b={b}")
+# plt.grid(True)
+# plt.show()
 
-print("Predictions:", predictions)
-print("Cost:", compute_cost(exp, sal, w, b))
+# print("Predictions:", predictions)
+# print("Cost:", compute_cost(exp, sal, w, b))
 
 

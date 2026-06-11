@@ -16,7 +16,7 @@ def compute_cost(x, y, w, b):
         error = prediction - y[i]
         cost += error ** 2
 
-    cost = cost / m
+    cost = cost / 2*m
     return cost
 
 
@@ -28,8 +28,7 @@ for i in range(-100,100):
     w.append(i)
     cost.append(cost_i)
 
-def calculate_gradient():
-    
 
-plt.plot(w,cost)
-plt.show()
+
+# plt.plot(w,cost)
+# plt.show()
